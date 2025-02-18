@@ -1,5 +1,7 @@
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import Layout from "../components/layout";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 import { Button } from "@material-ui/core";
 import PublicIcon from "@material-ui/icons/Public";
 import LocalAtmIcon from "@material-ui/icons/LocalAtm";

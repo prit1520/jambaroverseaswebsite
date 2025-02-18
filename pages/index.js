@@ -534,11 +534,9 @@ const useStyles = makeStyles((theme) =>
     whyChooseTitle: {
       fontSize: "3rem",
       fontWeight: "bold",
-      marginBottom: "1rem",
       color: "#525252",
-      [theme.breakpoints.down("sm")]: {
-        fontSize: "2.5rem"
-      }
+      textAlign: "center",
+      marginBottom: "1rem"
     },
     whyChooseGrid: {
       display: "grid",
@@ -576,11 +574,10 @@ const useStyles = makeStyles((theme) =>
       lineHeight: "1.6"
     },
     whyChooseUs: {
+      padding: "8rem 2rem",
+      background: "#f9f9f9",
       position: "relative",
-      padding: "6rem 2rem",
       overflow: "hidden",
-      textAlign: "center",
-      backgroundColor: "#fff"
     },
     whyChooseCircle: {
       position: "absolute",
@@ -594,10 +591,50 @@ const useStyles = makeStyles((theme) =>
       zIndex: 0
     },
     whyChooseContent: {
+      maxWidth: "1200px",
+      margin: "0 auto",
       position: "relative",
       zIndex: 1,
-      maxWidth: "1200px",
-      margin: "0 auto"
+      textAlign: "center",
+    },
+    whyChooseGrid: {
+      display: "grid",
+      gridTemplateColumns: "repeat(3, 1fr)",
+      gap: "3rem",
+      marginTop: "4rem",
+      [theme.breakpoints.down("md")]: {
+        gridTemplateColumns: "1fr 1fr",
+      },
+      [theme.breakpoints.down("sm")]: {
+        gridTemplateColumns: "1fr",
+      },
+    },
+    whyChooseCard: {
+      padding: "2.5rem",
+      background: "white",
+      borderRadius: "15px",
+      boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
+      transition: "transform 0.3s ease",
+      textAlign: "center",
+      "&:hover": {
+        transform: "translateY(-10px)",
+      },
+    },
+    whyChooseIcon: {
+      fontSize: "4rem!important",
+      color: "#F8BB86",
+      marginBottom: "1.5rem",
+    },
+    whyChooseCardTitle: {
+      fontSize: "1.8rem",
+      fontWeight: "bold",
+      marginBottom: "1rem",
+      color: "#333",
+    },
+    whyChooseCardText: {
+      color: "#666",
+      lineHeight: "1.6",
+      fontSize: "1.1rem",
     },
     reachSection: {
       padding: "6rem 2rem",
@@ -1030,85 +1067,58 @@ export default function Index() {
         <div className={classes.whyChooseUs}>
           <div className={classes.whyChooseCircle}></div>
           <div className={classes.whyChooseContent}>
-            <div className={classes.whyChooseTitle}>Why Choose Us?</div>
+            <Typography variant="h2" className={classes.whyChooseTitle}>
+              Why Choose JambarOverseas?
+            </Typography>
             <div className={classes.underline}></div>
+            
             <div className={classes.whyChooseGrid}>
-              {products.slice(0, 6).map((i, index) => {
-                return (
-                  <div key={`item-${index}`} className={classes.whyChooseItem}>
-                    <CheckCircleIcon className={classes.whyChooseIcon} />
-                    <div className={classes.whyChooseItemTitle}>{i.name}</div>
-                    <div className={classes.whyChooseItemText}>
-                      {i.description}
-                    </div>
-                  </div>
-                );
-              })}
-              {addOn.slice(0, 6).map((i, index) => {
-                return (
-                  <div key={`item-${index}`} className={classes.whyChooseItem}>
-                    <CheckCircleIcon className={classes.whyChooseIcon} />
-                    <div className={classes.whyChooseItemTitle}>{i.name}</div>
-                    <div className={classes.whyChooseItemText}>
-                      {i.description}
-                    </div>
-                  </div>
-                );
-              })}
+              {[
+                {
+                  icon: <EmojiObjectsIcon className={classes.whyChooseIcon} />,
+                  title: "Industry Expertise",
+                  text: "20+ years of experience in global trade with deep market knowledge"
+                },
+                {
+                  icon: <CheckCircleIcon className={classes.whyChooseIcon} />,
+                  title: "Quality Assurance",
+                  text: "Rigorous quality control processes and international certifications"
+                },
+                {
+                  icon: <PublicIcon className={classes.whyChooseIcon} />,
+                  title: "Global Network",
+                  text: "Established partnerships across 50+ countries worldwide"
+                },
+                {
+                  icon: <SpeedIcon className={classes.whyChooseIcon} />,
+                  title: "Efficient Logistics",
+                  text: "Streamlined supply chain management and timely deliveries"
+                },
+                {
+                  icon: <LocalAtmIcon className={classes.whyChooseIcon} />,
+                  title: "Competitive Pricing",
+                  text: "Best market rates with transparent cost structures"
+                },
+                {
+                  icon: <VerifiedUserIcon className={classes.whyChooseIcon} />,
+                  title: "Sustainable Practices",
+                  text: "Ethical sourcing and environmentally responsible operations"
+                }
+              ].map((item, index) => (
+                <div key={index} className={classes.whyChooseCard}>
+                  {item.icon}
+                  <Typography variant="h3" className={classes.whyChooseCardTitle}>
+                    {item.title}
+                  </Typography>
+                  <Typography variant="body1" className={classes.whyChooseCardText}>
+                    {item.text}
+                  </Typography>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className={classes.offer}>
-          <div className={classes.offerCircle}></div>
-          <div className={classes.offerOutline}></div>
-          <div className={classes.offerRoot}>
-            <div className={classes.offerOuter}>
-              <div>
-                <div className={classes.offerInner}>
-                  <div className={classes.iconOuter}>
-                    <DataUsageIcon className={classes.icon} />
-                  </div>
-                  <div className={classes.offerTitle}>Goods</div>
-                </div>
-                <div className={classes.offerText}>
-                  Jambaroverseas Strives at Giving Customers The Best Quality of
-                  Products and Nothing Less.
-                </div>
-              </div>
-            </div>
-
-            <div className={classes.offerOuter}>
-              <div>
-                <div className={classes.offerInner}>
-                  <div className={classes.iconOuter}>
-                    <LocalAtmIcon className={classes.icon} />
-                  </div>
-                  <div className={classes.offerTitle}>Services</div>
-                </div>
-                <div className={classes.offerText}>
-                  The Services that Our Company Provides are Top of the Line and
-                  Will Help your Business Grow Exponentially.
-                </div>
-              </div>
-            </div>
-
-            <div className={classes.offerOuter}>
-              <div>
-                <div className={classes.offerInner}>
-                  <div className={classes.iconOuter}>
-                    <AccountBalanceIcon className={classes.icon} />
-                  </div>
-                  <div className={classes.offerTitle}>Prices</div>
-                </div>
-                <div className={classes.offerText}>
-                Jambaroverseas Gives the Best Prices in Canada For The Services and
-                  Products that We Provide.
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div className={classes.servicesRoot}>
           <div className={classes.servicesHeader}>The Products We Provide</div>

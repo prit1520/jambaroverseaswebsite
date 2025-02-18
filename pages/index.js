@@ -1,7 +1,5 @@
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 import Layout from "../components/layout";
-import React from 'react';
-import ReactDOM from 'react-dom/client';
 import { Button } from "@material-ui/core";
 import PublicIcon from "@material-ui/icons/Public";
 import LocalAtmIcon from "@material-ui/icons/LocalAtm";
@@ -24,6 +22,8 @@ import {
   Typography 
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import { createTheme } from '@material-ui/core/styles';
+import React from 'react';
 
 import { NextSeo } from "next-seo";
 const useStyles = makeStyles((theme) =>
@@ -988,7 +988,7 @@ export default function Index() {
             playsInline
             className={classes.videoBackground}
           >
-            <source src="/herovideo.mp4" type="video/mp4" />
+            <source src="/videos/herovideo.mp4" type="video/mp4" />
           </video>
           <div className={classes.aboveFoldContent}>
             <div className={classes.aboveFoldTextBox}>
@@ -1033,34 +1033,28 @@ export default function Index() {
             <div className={classes.whyChooseTitle}>Why Choose Us?</div>
             <div className={classes.underline}></div>
             <div className={classes.whyChooseGrid}>
-              <div className={classes.whyChooseItem}>
-                <CheckCircleIcon className={classes.whyChooseIcon} />
-                <div className={classes.whyChooseItemTitle}>Quality Assured</div>
-                <div className={classes.whyChooseItemText}>
-                  We maintain the highest standards in product quality and service delivery
-                </div>
-              </div>
-              <div className={classes.whyChooseItem}>
-                <SpeedIcon className={classes.whyChooseIcon} />
-                <div className={classes.whyChooseItemTitle}>Fast & Efficient</div>
-                <div className={classes.whyChooseItemText}>
-                  Quick response times and efficient processing of all import-export needs
-                </div>
-              </div>
-              <div className={classes.whyChooseItem}>
-                <SecurityIcon className={classes.whyChooseIcon} />
-                <div className={classes.whyChooseItemTitle}>Secure & Reliable</div>
-                <div className={classes.whyChooseItemText}>
-                  Trusted partnerships and secure handling of all transactions
-                </div>
-              </div>
-              <div className={classes.whyChooseItem}>
-                <EmojiObjectsIcon className={classes.whyChooseIcon} />
-                <div className={classes.whyChooseItemTitle}>Expert Solutions</div>
-                <div className={classes.whyChooseItemText}>
-                  Tailored solutions backed by years of industry expertise
-                </div>
-              </div>
+              {products.slice(0, 6).map((i, index) => {
+                return (
+                  <div key={`item-${index}`} className={classes.whyChooseItem}>
+                    <CheckCircleIcon className={classes.whyChooseIcon} />
+                    <div className={classes.whyChooseItemTitle}>{i.name}</div>
+                    <div className={classes.whyChooseItemText}>
+                      {i.description}
+                    </div>
+                  </div>
+                );
+              })}
+              {addOn.slice(0, 6).map((i, index) => {
+                return (
+                  <div key={`item-${index}`} className={classes.whyChooseItem}>
+                    <CheckCircleIcon className={classes.whyChooseIcon} />
+                    <div className={classes.whyChooseItemTitle}>{i.name}</div>
+                    <div className={classes.whyChooseItemText}>
+                      {i.description}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -1120,17 +1114,17 @@ export default function Index() {
           <div className={classes.servicesHeader}>The Products We Provide</div>
           <div className={classes.servicesSub}>But Not Limited To</div>
           <div className={classes.servicesGrid}>
-            {products.slice(0, 6).map((i) => {
+            {products.slice(0, 6).map((i, index) => {
               return (
-                <div className={classes.servicesGridChild}>
+                <div key={`item-${index}`} className={classes.servicesGridChild}>
                   <img src={i.img} alt={i.name} />
                   <div>{i.name}</div>
                 </div>
               );
             })}
-            {addOn.slice(0, 6).map((i) => {
+            {addOn.slice(0, 6).map((i, index) => {
               return (
-                <div className={classes.servicesGridChild}>
+                <div key={`item-${index}`} className={classes.servicesGridChild}>
                   <img src={i.img} alt={i.name} />
                   <div>{i.name}</div>
                 </div>
@@ -1151,19 +1145,18 @@ export default function Index() {
           <div className={classes.underline}></div>
           <div className={classes.scrollContainer}>
             <div className={classes.scrollTrack}>
-              {/* Double the images for seamless loop */}
-              {[...Array(2)].map(() => (
-                <>
-                  <img src="/scrolling/1.png" alt="Membership 1" className={classes.scrollImage} />
-                  <img src="/scrolling/2.png" alt="Membership 2" className={classes.scrollImage} />
-                  <img src="/scrolling/3.png" alt="Membership 3" className={classes.scrollImage} />
-                  <img src="/scrolling/4.png" alt="Membership 4" className={classes.scrollImage} />
-                  <img src="/scrolling/5.png" alt="Membership 5" className={classes.scrollImage} />
-                  <img src="/scrolling/6.png" alt="Membership 6" className={classes.scrollImage} />
-                  <img src="/scrolling/7.png" alt="Membership 7" className={classes.scrollImage} />
-                  <img src="/scrolling/8.jpg" alt="Membership 8" className={classes.scrollImage} />
-                  <img src="/scrolling/9.jpg" alt="Membership 9" className={classes.scrollImage} />
-                </>
+              {[...Array(2)].map((_, index) => (
+                <React.Fragment key={`fragment-${index}`}>
+                  <img src="/scrolling/1.png" alt="Membership 1" className={classes.scrollImage} key={`1-${index}`} />
+                  <img src="/scrolling/2.png" alt="Membership 2" className={classes.scrollImage} key={`2-${index}`} />
+                  <img src="/scrolling/3.png" alt="Membership 3" className={classes.scrollImage} key={`3-${index}`} />
+                  <img src="/scrolling/4.png" alt="Membership 4" className={classes.scrollImage} key={`4-${index}`} />
+                  <img src="/scrolling/5.png" alt="Membership 5" className={classes.scrollImage} key={`5-${index}`} />
+                  <img src="/scrolling/6.png" alt="Membership 6" className={classes.scrollImage} key={`6-${index}`} />
+                  <img src="/scrolling/7.png" alt="Membership 7" className={classes.scrollImage} key={`7-${index}`} />
+                  <img src="/scrolling/8.jpg" alt="Membership 8" className={classes.scrollImage} key={`8-${index}`} />
+                  <img src="/scrolling/9.jpg" alt="Membership 9" className={classes.scrollImage} key={`9-${index}`} />
+                </React.Fragment>
               ))}
             </div>
           </div>

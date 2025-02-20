@@ -735,17 +735,16 @@ export default function about() {
               <div className={classes.leaderImage}>
                 <img src="/role/user2.png" alt="CEO" />
               </div>
-              <h3 className={classes.leaderName}>Jayeshbhai Jambukiya</h3>
-              <p className={classes.leaderTitle}>Chief Executive Officer</p>
+              <h3 className={classes.leaderName}>Jayesh Jambukiya</h3>
+              <p className={classes.leaderTitle}>Founder</p>
               <div className={classes.greenUnderline}></div>
             </div>
-
             <div className={classes.leaderBox}>
               <div className={classes.leaderImage}>
                 <img src="/role/user1.png" alt="Founder" />
               </div>
-              <h3 className={classes.leaderName}>Jayeshbhai Jambukiya</h3>
-              <p className={classes.leaderTitle}>Founder</p>
+              <h3 className={classes.leaderName}>Dinesh Baraiya</h3>
+              <p className={classes.leaderTitle}>Chief Executive Officer</p>
               <div className={classes.greenUnderline}></div>
             </div>
           </div>

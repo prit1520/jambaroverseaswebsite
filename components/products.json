@@ -1,7 +1,15 @@
 [
   {
-    "name": "Grain, Seed, & Pulse",
-    "img": "/products/grain.jpg"
+    "name": "Sindhav Salt",
+    "img": "/products/salt.jpg"
+  },
+  {
+    "name":"Coconuts",
+    "img":"/products/coconuts.jpg"
+  },
+  {
+    "name":"Natural Raw Sugar",
+    "img":"/products/sugar.png"
   },
   {
     "name": "Edible Oil",
@@ -12,16 +20,20 @@
     "img": "/products/wheat.jpg"
   },
   {
-    "name": "Soybeans",
-    "img": "/products/soybeans.jpg"
-  },
-  {
     "name": "Corn",
     "img": "/products/corn.jpg"
   },
   {
     "name": "Red & Green Lentils",
     "img": "/products/red-green-lentils.jpg"
+  },
+  {
+    "name": "Grain, Seed, & Pulse",
+    "img": "/products/grain.jpg"
+  },
+  {
+    "name": "Soybeans",
+    "img": "/products/soybeans.jpg"
   },
   {
     "name": "Sugar",

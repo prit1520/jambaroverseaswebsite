@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) =>
       },
     },
     logo: {
-      width: "6rem",
+      width: "10rem",
     },
     year: {
       textAlign: "center",

@@ -120,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   image: {
-    width: "7rem",
+    width: "15rem",
     margin: 0,
   },
   linkContainer: {

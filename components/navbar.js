@@ -120,8 +120,11 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   image: {
-    width: "15rem",
+    width: "20rem",
     margin: 0,
+    height: "5rem", // Add height constraint
+    objectFit: "cover", // Add object-fit to crop
+    objectPosition: "center", // Center the cropped image
   },
   linkContainer: {
     display: "flex",
@@ -184,6 +187,9 @@ const useStyles = makeStyles((theme) => ({
   },
   sideBarImageInner: {
     width: "7rem",
+    height: "2.5rem", // Add height constraint
+    objectFit: "cover", // Add object-fit to crop
+    objectPosition: "center", // Center the cropped image
   },
   svgIcon: {
     color: "black",
@@ -197,6 +203,12 @@ const useStyles = makeStyles((theme) => ({
   divider: {
     backgroundColor: "black",
     opacity: "10%",
+  },
+  shortLogoContainerAppbarInner: {
+    width: "7rem",
+    height: "2.5rem", // Add height constraint
+    objectFit: "cover", // Add object-fit to crop
+    objectPosition: "center", // Center the cropped image
   },
 }));
 
@@ -266,7 +278,7 @@ export default function navbar({ solidNav, whiteLogo }) {
         <div className={classes.sideBarImage}>
           <img
             className={classes.sideBarImageInner}
-            src="/png.png"
+            src="/logo/transparent_logo.png"
             alt="logo"
           />
         </div>
@@ -355,9 +367,9 @@ export default function navbar({ solidNav, whiteLogo }) {
                 src={
                   whiteLogo !== undefined
                     ? whiteLogoState === false
-                      ? "/png.png"
+                      ? "/logo/transparent_logo.png"
                       : whiteLogo
-                    : "/png.png"
+                    : "/logo/transparent_logo.png"
                 }
                 alt="logo"
                 className={classes.image}
@@ -411,7 +423,7 @@ export default function navbar({ solidNav, whiteLogo }) {
             <Link href="/">
               <img
                 className={classes.shortLogoContainerAppbarInner}
-                src="/png.png"
+                src="/transparent_logo.png"
                 alt="logo"
               />
             </Link>

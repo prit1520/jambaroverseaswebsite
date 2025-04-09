@@ -287,9 +287,9 @@ export default function contact() {
 
   useEffect(() => {
     if (isMobile) {
-      setSrc("/png.png");
+      setSrc("/logo/transparent_logo.png");
     } else {
-      setSrc("/png.png");
+      setSrc("/logo/transparent_white_logo.png");
     }
   });
   return (
@@ -535,7 +535,7 @@ export default function contact() {
                 <div className={classes.detailBox}>
                   <LocationOnIcon className={classes.detailIcon} />
                   <h3 className={classes.detailTitle}>Address</h3>
-                  <p className={classes.detailText}>Starpalace Kosad Surat Gujrat India</p>
+                  <p className={classes.detailText}>No.8 2nd floor gruham icon in front of kosad lack garden new kosad road, amroli, surat, gujrat, india - 394107</p>
                 </div>
                 
                 <div className={classes.detailBox}>

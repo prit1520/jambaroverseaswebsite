@@ -632,7 +632,7 @@ export default function about() {
         <div className={classes.belowFold}>
           <div>
             <img
-              src="/png.png"
+              src="/logo/transparent_white_short_logo.png"
               alt="logo"
               className={classes.logo}
             />

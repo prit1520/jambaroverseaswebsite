@@ -12,6 +12,8 @@ import BuildIcon from "@material-ui/icons/Build";
 import BusinessIcon from "@material-ui/icons/Business";
 import PhonelinkIcon from "@material-ui/icons/Phonelink";
 import { NextSeo } from "next-seo";
+import Link from "next/link";
+
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
@@ -501,7 +503,7 @@ export default function productsandservices() {
             playsInline
             className={classes.videoBackground}
           >
-            <source src="/productvideo.mp4" type="video/mp4" />
+            <source src="/videos/productvideo.mp4" type="video/mp4" />
           </video>
           <div className={classes.aboveFoldContent}>
             <div className={classes.aboveFoldTextBox}>
@@ -568,10 +570,12 @@ export default function productsandservices() {
           <div className={classes.productsGrid}>
             {products.map((i) => {
               return (
-                <div className={classes.productsGridChild}>
-                  <img src={i.img} alt={i.name} />
-                  <div>{i.name}</div>
-                </div>
+                <Link href={`/product/${i.id}`} key={i.id}>
+                  <div className={classes.productsGridChild}>
+                    <img src={i.img} alt={i.name} />
+                    <div>{i.name}</div>
+                  </div>
+                </Link>
               );
             })}
           </div>

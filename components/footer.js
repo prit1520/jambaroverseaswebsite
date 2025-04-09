@@ -159,7 +159,7 @@ export default function footer() {
       <div className={classes.outer}>
         <div className={classes.logoRoot}>
           <div className={classes.logoContainer}>
-            <img src="/png.png" alt="logo" className={classes.logo} />
+            <img src="/logo/transparent_short_logo.png" alt="logo" className={classes.logo} />
           </div>
           <div className={classes.year}>&copy; {new Date().getFullYear()}</div>
         </div>{" "}

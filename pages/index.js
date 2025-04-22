@@ -1075,29 +1075,14 @@ export default function Index() {
             <div className={classes.whyChooseGrid}>
               {[
                 {
-                  icon: <EmojiObjectsIcon className={classes.whyChooseIcon} />,
-                  title: "Industry Expertise",
-                  text: "20+ years of experience in global trade with deep market knowledge"
-                },
-                {
                   icon: <CheckCircleIcon className={classes.whyChooseIcon} />,
                   title: "Quality Assurance",
                   text: "Rigorous quality control processes and international certifications"
                 },
                 {
-                  icon: <PublicIcon className={classes.whyChooseIcon} />,
-                  title: "Global Network",
-                  text: "Established partnerships across 50+ countries worldwide"
-                },
-                {
                   icon: <SpeedIcon className={classes.whyChooseIcon} />,
                   title: "Efficient Logistics",
                   text: "Streamlined supply chain management and timely deliveries"
-                },
-                {
-                  icon: <LocalAtmIcon className={classes.whyChooseIcon} />,
-                  title: "Competitive Pricing",
-                  text: "Best market rates with transparent cost structures"
                 },
                 {
                   icon: <VerifiedUserIcon className={classes.whyChooseIcon} />,
@@ -1157,14 +1142,8 @@ export default function Index() {
             <div className={classes.scrollTrack}>
               {[...Array(2)].map((_, index) => (
                 <React.Fragment key={`fragment-${index}`}>
-                  <img src="/scrolling/1.png" alt="Membership 1" className={classes.scrollImage} key={`1-${index}`} />
-                  <img src="/scrolling/2.png" alt="Membership 2" className={classes.scrollImage} key={`2-${index}`} />
                   <img src="/scrolling/3.png" alt="Membership 3" className={classes.scrollImage} key={`3-${index}`} />
-                  <img src="/scrolling/4.png" alt="Membership 4" className={classes.scrollImage} key={`4-${index}`} />
                   <img src="/scrolling/5.png" alt="Membership 5" className={classes.scrollImage} key={`5-${index}`} />
-                  <img src="/scrolling/6.png" alt="Membership 6" className={classes.scrollImage} key={`6-${index}`} />
-                  <img src="/scrolling/7.png" alt="Membership 7" className={classes.scrollImage} key={`7-${index}`} />
-                  <img src="/scrolling/8.jpg" alt="Membership 8" className={classes.scrollImage} key={`8-${index}`} />
                   <img src="/scrolling/9.jpg" alt="Membership 9" className={classes.scrollImage} key={`9-${index}`} />
                 </React.Fragment>
               ))}
@@ -1257,7 +1236,7 @@ export default function Index() {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={classes.answer}>
-                  We specialize in sourcing, quality assurance, and logistics solutions to help companies procure goods efficiently from emerging global markets.
+                Jamabar Overseas provides premium quality agricultural products, including fruits, vegetables, and spices, at competitive prices with reliable, timely delivery worldwide.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -1275,24 +1254,7 @@ export default function Index() {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={classes.answer}>
-                  Our product range includes Millets, Rice And Ceramic. We ensure each product meets international quality standards to provide our clients with the best offerings across the globe.
-                </Typography>
-              </AccordionDetails>
-            </Accordion>
-
-            <Accordion className={classes.accordion}>
-              <AccordionSummary
-                expandIcon={<ExpandMoreIcon />}
-                className={classes.accordionSummary}
-              >
-                <Typography className={classes.question}>
-                  <span className={classes.prefix}>III.</span>
-                  What services does JambarOverseas provide?
-                </Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <Typography className={classes.answer}>
-                  We specialize in sourcing, quality assurance, and logistics solutions to help companies procure goods efficiently from emerging global markets.
+                  Our products for visit <a href = "http://jambaroversea.com/products-and-services">http://jambaroversea.com/products-and-services</a> We ensure each product meets international quality standards to provide our clients with the best offerings across the globe.
                 </Typography>
               </AccordionDetails>
             </Accordion>
@@ -1339,7 +1301,7 @@ export default function Index() {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={classes.answer}>
-                We accept a variety of payment methods tailored to the needs and security of our international clients, including Cash in Advance (CIA) for immediate payment, Letters of Credit (L/C) for guaranteed payment upon fulfillment of specified terms, Documentary Collections (D/C) as a balance between seller security and buyer convenience, Open Account (O/A) transactions for trusted clients with established relationships, and Consignment, allowing payment post-sale. These methods ensure flexibility, security, and convenience for both parties involved in the transaction.                </Typography>
+                To start working with us, simply reach out via our contact page or email, share your product requirements, and we will provide you with a quote. Once agreed, we proceed with Cash in Advance (CIA) payment for immediate processing and timely delivery of your order.                </Typography>
               </AccordionDetails>
             </Accordion>
 

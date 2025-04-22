@@ -207,7 +207,7 @@ export default function footer() {
         </div>
         <div className={classes.section}>
           <div className={classes.header}>Follow Us</div>
-          <div>
+          <div style={{ display: 'flex', gap: '1rem' }}>
             <a 
               href="https://www.instagram.com/jambaroverseas?utm_source=qr&igsh=MTIydmk3MWIwOXBhcg==" 
               target="_blank" 
@@ -216,6 +216,28 @@ export default function footer() {
               <img
                 src="/socials/instagram.svg"
                 alt="instagram"
+                className={classes.socialImg}
+              />
+            </a>
+            <a 
+              href="https://www.linkedin.com/company/jambaroverseas"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/socials/linkedin.svg"
+                alt="linkedin"
+                className={classes.socialImg}
+              />
+            </a>
+            <a 
+              href="https://wa.me/+919726399961"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/socials/whatsapp.svg"
+                alt="whatsapp"
                 className={classes.socialImg}
               />
             </a>
@@ -239,7 +261,7 @@ export default function footer() {
       </div>
 
       <div className={classes.locationRoot}>
-        JambarOverseas Inc. Starpalace Kosad -394107 Surat, Gujrat, India.
+        JambarOverseas Inc. No.8 2nd floor gruham icon in front of kosad lack garden new kosad road, amroli, surat, gujrat, india - 394107.
       </div>
     </div>
   );

@@ -220,6 +220,17 @@ export default function footer() {
               />
             </a>
             <a 
+              href="https://www.facebook.com/share/15FYrgQCKZ/"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img
+                src="/socials/facebook.svg"
+                alt="facebook"
+                className={classes.socialImg}
+              />
+            </a>
+            <a 
               href="https://www.linkedin.com/company/jambaroverseas"
               target="_blank" 
               rel="noopener noreferrer"

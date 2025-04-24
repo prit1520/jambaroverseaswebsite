@@ -51,10 +51,10 @@
       "Wide variety"
     ],
     "gallery": [
-      "/products/spices/Red-Chilli.jpg",
-      "/products/spices/Jeera.jpg",
-      "/products/spices/Turmerics.jpg",
-      "/products/spices/Cilantro.jpg"
+      "/public/products/spices/red-chilli.jpg",
+      "/products/spices/jeera.jpg",
+      "/products/spices/turmerics.jpg",
+      "/products/spices/cilantro.jpg"
 
     ]
   },

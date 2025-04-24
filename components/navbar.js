@@ -423,7 +423,7 @@ export default function navbar({ solidNav, whiteLogo }) {
             <Link href="/">
               <img
                 className={classes.shortLogoContainerAppbarInner}
-                src="/transparent_logo.png"
+                src="/logo/transparent_logo.png"
                 alt="logo"
               />
             </Link>

@@ -5,6 +5,7 @@ import products from "../../components/products.json";
 import { NextSeo } from "next-seo";
 import { Button, Chip } from "@material-ui/core";
 import ContactButton from "../../components/contactButton";
+import Image from 'next/image';
 
 const useStyles = makeStyles((theme) => ({
   root: {

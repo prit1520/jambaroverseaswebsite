@@ -55,7 +55,6 @@
       "/products/spices/jeera.jpg",
       "/products/spices/turmerics.jpg",
       "/products/spices/cilantro.jpg"
-
     ]
   },
   {
@@ -82,6 +81,19 @@
       "Rich in nutrients",
       "Healthy alternative",
       "Premium quality"
+    ]
+  },
+  {
+    "id": "cow-ghee",
+    "name": "Pure Cow Ghee",
+    "img": "/products/cow-ghee.jpg",
+    "description": "Traditional pure cow ghee made from fresh dairy cream using age-old methods.",
+    "categories": ["Dairy", "Natural Products"],
+    "features": [
+      "100% Pure cow milk",
+      "No preservatives",
+      "Rich in vitamins A, D, E, K",
+      "Traditional process"
     ]
   }
 ]

@@ -181,6 +181,38 @@ const useStyles = makeStyles((theme) =>
       color: "grey",
       lineHeight: 1.6
     },
+    mapSection: {
+      width: '100%',
+      padding: '3rem',
+      backgroundColor: '#f9f9f9',
+      [theme.breakpoints.down("sm")]: {
+        padding: '1rem'
+      }
+    },
+    mapContainer: {
+      width: '100%',
+      height: '400px',
+      borderRadius: '10px',
+      overflow: 'hidden',
+      boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+      border: '1px solid #eee',
+      '&:hover': {
+        boxShadow: '0 6px 25px rgba(0,0,0,0.15)',
+      }
+    },
+    mapFrame: {
+      width: '100%',
+      height: '100%',
+      border: 'none'
+    },
+    contactWrapper: {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '3rem',
+      width: '100%',
+      maxWidth: '1200px',
+      margin: '0 auto'
+    },
     formContainer: {
       backgroundColor: "white",
       borderRadius: "10px",
@@ -525,23 +557,44 @@ export default function contact() {
                   )}
                 </Formik>
               </div>
-              <div className={classes.detailsSection}>
-                <div className={classes.detailBox}>
-                  <PhoneIcon className={classes.detailIcon} />
-                  <h3 className={classes.detailTitle}>Phone</h3>
-                  <p className={classes.detailText}>+91 93163 08167</p>
+              <div className={classes.contactWrapper}>
+                <div className={classes.detailsSection}>
+                  <div className={classes.detailBox}>
+                    <PhoneIcon className={classes.detailIcon} />
+                    <h3 className={classes.detailTitle}>Phone</h3>
+                    <p className={classes.detailText}>+91 93163 08167</p>
+                  </div>
+                  
+                  <div className={classes.detailBox}>
+                    <LocationOnIcon className={classes.detailIcon} />
+                    <h3 className={classes.detailTitle}>Address</h3>
+                    <p className={classes.detailText}>No.8 2nd floor gruham icon in front of kosad lack garden new kosad road, amroli, surat, gujrat, india - 394107</p>
+                  </div>
+                  
+                  <div className={classes.detailBox}>
+                    <EmailIcon className={classes.detailIcon} />
+                    <h3 className={classes.detailTitle}>Email</h3>
+                    <p className={classes.detailText}>Jambaroverseas@gmail.com</p>
+                  </div>
                 </div>
-                
-                <div className={classes.detailBox}>
-                  <LocationOnIcon className={classes.detailIcon} />
-                  <h3 className={classes.detailTitle}>Address</h3>
-                  <p className={classes.detailText}>No.8 2nd floor gruham icon in front of kosad lack garden new kosad road, amroli, surat, gujrat, india - 394107</p>
-                </div>
-                
-                <div className={classes.detailBox}>
-                  <EmailIcon className={classes.detailIcon} />
-                  <h3 className={classes.detailTitle}>Email</h3>
-                  <p className={classes.detailText}>Jambaroverseas@gmail.com</p>
+
+                <div className={classes.mapSection}>
+                  <div className={classes.mapContainer}>
+                    <a href="https://www.google.com/maps/place/Gruham+Icon/@21.2540747,72.8587271,17z" target="_blank" rel="noopener noreferrer">
+                      <iframe 
+                        className={classes.mapFrame}
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.5248526657164!2d72.85654717497506!3d21.254074673689144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f5fe9eda151%3A0x2caf9e1c2fbdd668!2sGruham%20Icon!5e0!3m2!1sen!2sin!4v1683126547959!5m2!1sen!2sin"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        loading="lazy"
+                        allowFullScreen
+                        referrerPolicy="no-referrer-when-downgrade"
+                        title="Gruham Icon Location"
+                        aria-label="Gruham Icon Location Map"
+                      />
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

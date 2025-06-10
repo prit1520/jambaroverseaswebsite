@@ -591,7 +591,7 @@ export default function contact() {
                         allowFullScreen
                         referrerPolicy="no-referrer-when-downgrade"
                         title="Jambar Overseas Location"
-                        aria-label="Jambar Overseas Location Map"
+                        aria-label="Jambar Overseas Location"
                       />
                     </a>
                   </div>

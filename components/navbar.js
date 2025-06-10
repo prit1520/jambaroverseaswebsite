@@ -251,8 +251,8 @@ export default function navbar({ solidNav, whiteLogo }) {
       },
     },
     {
-      text: "Careers",
-      link: "/careers",
+      text: "Cirtificates",
+      link: "/cirtificates",
       icon: <WorkIcon className={classes.svgIcon} />,
       onClick: () => {
         handleDrawerToggle();
@@ -394,8 +394,8 @@ export default function navbar({ solidNav, whiteLogo }) {
                 </Link>
               </div>
               <div className={classes.link}>
-                <Link href="/careers" className={classes.linkTag}>
-                  <span>Careers</span>
+                <Link href="/cirtificates" className={classes.linkTag}>
+                  <span>Cirtificates</span>
                 </Link>
               </div>
             </div>

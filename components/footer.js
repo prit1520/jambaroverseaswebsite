@@ -181,7 +181,7 @@ export default function footer() {
             <Link href="/about">About Us</Link>
           </div>
           <div className={classes.link}>
-            <Link href="/careers">Careers</Link>
+            <Link href="/cirtificates">Trust</Link>
           </div>
           <div className={classes.link}>
             <Link href="/contact">Contact Us</Link>

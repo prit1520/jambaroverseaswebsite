@@ -39,25 +39,6 @@
     ]
   },
   {
-    "id": "spices",
-    "name": "Spices",
-    "img": "/products/spices.jpg",
-    "description": "Aromatic and flavorful spices to enhance your culinary experience.",
-    "categories": ["Spices", "Condiments"],
-    "features": [
-      "Aromatic",
-      "Rich flavor",
-      "Premium quality",
-      "Wide variety"
-    ],
-    "gallery": [
-      "/products/spices/red-chilli.jpg",
-      "/products/spices/jeera.jpg",
-      "/products/spices/turmerics.jpg",
-      "/products/spices/cilantro.jpg"
-    ]
-  },
-  {
     "id": "groceries",
     "name": "Groceries",
     "img": "/products/groceries.jpg",

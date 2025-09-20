@@ -231,7 +231,7 @@ export default function footer() {
               />
             </a>
             <a 
-              href="https://www.linkedin.com/company/jambaroverseas"
+              href="https://www.linkedin.com/in/jayesh-jambukiya-45a461363/"
               target="_blank" 
               rel="noopener noreferrer"
             >

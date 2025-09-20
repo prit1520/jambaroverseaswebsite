@@ -207,7 +207,7 @@ const certificates = [
     pdfUrl: "https://drive.google.com/file/d/1AUXqfBQBMO4iAkKCx7UgEZapiVAn5RGZ/view?usp=sharing",
   },
   {
-    title: "Fssai Certificate",
+    title: "Fssai Certificates",
     image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1758347012/Gemini_Generated_Image_f6imi3f6imi3f6im_q01yjy.png", // Add preview image
     pdfUrl: "https://drive.google.com/file/d/1aNviS2io2QSFMh7gCBoM_KNi2uMsf7PY/view?usp=sharing",
   },

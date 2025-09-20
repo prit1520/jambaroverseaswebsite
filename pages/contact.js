@@ -574,7 +574,7 @@ export default function contact() {
                   <div className={classes.detailBox}>
                     <EmailIcon className={classes.detailIcon} />
                     <h3 className={classes.detailTitle}>Email</h3>
-                    <p className={classes.detailText}>Jambaroverseas@gmail.com</p>
+                    <p className={classes.detailText}>sales@jambaroversea.com</p>
                   </div>
                 </div>
 

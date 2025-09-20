@@ -83,6 +83,7 @@ const useStyles = makeStyles((theme) =>
       margin: "0 auto",
     },
     certificateCard: {
+      aspectRatio: "3 / 4",
       height: "100%",
       display: "flex",
       flexDirection: "column",
@@ -114,7 +115,7 @@ const useStyles = makeStyles((theme) =>
     },
     certificateImage: {
       width: "100%",
-      height: "400px",
+      height: "100%",
       objectFit: "cover",
       borderBottom: "1px solid rgba(0,0,0,0.1)",
     },
@@ -187,18 +188,28 @@ const useStyles = makeStyles((theme) =>
 const certificates = [
   {
     title: "Registration Certificate",
-    image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1749564345/jambar%20overseas/cirtificates/mpzinatbi2yc7jeybcpx.jpg", // Add preview image
-    pdfUrl: "https://drive.google.com/file/d/1Lw34zQIMiSMFDIQKye5dbFqp3cFo60ji/view?usp=sharing",
+    image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1758347011/Gemini_Generated_Image_jkp7yjjkp7yjjkp7_mzyag6.png", // Add preview image
+    pdfUrl: "https://drive.google.com/file/d/1vMS2Mp0la_BZVMf8GT0JjuWlX1Wc2VZO/view?usp=sharing",
   },
   {
     title: "Udyam Registration Certificate",
-    image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1749564346/jambar%20overseas/cirtificates/mkqsneottndxdoh5mi6z.jpg", // Add preview image
-    pdfUrl: "https://drive.google.com/file/d/1eIDKGLuwfbsb-FzAYqo8Q5vZY6j-YYH7/view?usp=sharing",
+    image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1758347012/Gemini_Generated_Image_ur6eacur6eacur6e_sxalh8.png", // Add preview image
+    pdfUrl: "https://drive.google.com/file/d/1mlVBXqpKtEiJLnNFdepbQGdbeKZCsBgF/view?usp=sharing",
   },
   {
     title: "Importer-Exporter Code",
-    image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1749564344/jambar%20overseas/cirtificates/bfxvz2dkqqk6qkqxw2y7.jpg", // Add preview image
+    image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1758347013/Gemini_Generated_Image_xcjqvexcjqvexcjq_bqzgdp.png", // Add preview image
     pdfUrl: "https://drive.google.com/file/d/19EU0gzHLH6a4LQWCu4Tz8mdjnl1AY8rw/view?usp=sharing",
+  },
+  {
+    title: "APEDA Certificate",
+    image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1758347013/Gemini_Generated_Image_exhmpwexhmpwexhm_bwrki4.png", // Add preview image
+    pdfUrl: "https://drive.google.com/file/d/1AUXqfBQBMO4iAkKCx7UgEZapiVAn5RGZ/view?usp=sharing",
+  },
+  {
+    title: "Fssai Certificate",
+    image: "https://res.cloudinary.com/dszdqpahf/image/upload/v1758347012/Gemini_Generated_Image_f6imi3f6imi3f6im_q01yjy.png", // Add preview image
+    pdfUrl: "https://drive.google.com/file/d/1aNviS2io2QSFMh7gCBoM_KNi2uMsf7PY/view?usp=sharing",
   },
 ];
 
@@ -250,12 +261,6 @@ export default function Certificates() {
                       alt={cert.title}
                       className={classes.certificateImage}
                     />
-                    <CardContent className={classes.cardContent}>
-                      <Typography className={classes.certificateTitle}>
-                        <VerifiedUserIcon className={classes.verifyIcon} />
-                        {cert.title}
-                      </Typography>
-                    </CardContent>
                   </Card>
                 </a>
               </Grid>

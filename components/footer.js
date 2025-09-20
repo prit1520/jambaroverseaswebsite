@@ -190,7 +190,7 @@ export default function footer() {
         <div className={classes.sectionSupport}>
           <div className={classes.header}>Support</div>
           <div className={classes.link}>
-            <div className={classes.email}>Email: Jambaroverseas@gmail.com</div>
+            <div className={classes.email}>Email: sales@jambaroversea.com</div>
           </div>
 
           <div className={classes.phone}>

@@ -13,19 +13,6 @@
     ]
   },
   {
-    "id": "coconuts",
-    "name": "Coconuts",
-    "img": "/products/coconuts.jpg",
-    "description": "Fresh and high-quality coconuts sourced from the finest farms.",
-    "categories": ["Fruits", "Natural Products"],
-    "features": [
-      "Fresh harvest",
-      "Organic certified",
-      "Premium selection",
-      "Export quality"
-    ]
-  },
-  {
     "id": "natural-raw-sugar",
     "name": "Natural Raw Sugar",
     "img": "/products/sugar.png",
@@ -36,19 +23,6 @@
       "Natural sweetness",
       "Healthier alternative",
       "Premium quality"
-    ]
-  },
-  {
-    "id": "groceries",
-    "name": "Groceries",
-    "img": "/products/groceries.jpg",
-    "description": "Essential groceries for your daily needs, sourced responsibly.",
-    "categories": ["Groceries", "Daily Essentials"],
-    "features": [
-      "Responsibly sourced",
-      "High quality",
-      "Wide range",
-      "Affordable"
     ]
   },
   {
@@ -75,6 +49,19 @@
       "No preservatives",
       "Rich in vitamins A, D, E, K",
       "Traditional process"
+    ]
+  },
+  {
+    "id": "groundnut-oil",
+    "name": "Groundnut Oil (Peanut Oil)",
+    "img": "/products/groundnut_oil.jpg",
+    "description": "High-quality groundnut (peanut) oil suitable for cooking and food processing. Available in cold-pressed and refined options.",
+    "categories": ["Oils", "Edible Oils"],
+    "features": [
+      "Cold-pressed and refined options",
+      "High smoke point — ideal for frying",
+      "Rich in monounsaturated fats",
+      "Food grade, industrial packaging available"
     ]
   }
 ]

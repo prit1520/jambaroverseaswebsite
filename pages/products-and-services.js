@@ -495,11 +495,11 @@ export default function productsandservices() {
         any other countries globally."
       />
       <div className={classes.root}>
-      <div className={classes.aboveFold}>
-          <video 
-            autoPlay 
-            muted 
-            loop 
+        <div className={classes.aboveFold}>
+          <video
+            autoPlay
+            muted
+            loop
             playsInline
             className={classes.videoBackground}
           >
@@ -507,21 +507,21 @@ export default function productsandservices() {
           </video>
           <div className={classes.aboveFoldContent}>
             <div className={classes.aboveFoldTextBox}>
-            <div className={classes.aboveFoldText}>
-            <h1 className={classes.aboveFoldHeader}>
-              Quality Products and Services
-            </h1>
-            <h3 className={classes.aboveFoldSub}>Products & Services</h3>
-            <div>
-              <ContactButton />
-            </div>
-          </div>
+              <div className={classes.aboveFoldText}>
+                <h1 className={classes.aboveFoldHeader}>
+                  Quality Products and Services
+                </h1>
+                <h3 className={classes.aboveFoldSub}>Products & Services</h3>
+                <div>
+                  <ContactButton />
+                </div>
+              </div>
               <div className={classes.expandMoreContainer}>
                 <ExpandMoreIcon />
               </div>
             </div>
           </div>
-          </div>
+        </div>
         <div className={classes.services}>
           <div className={classes.servicesCircle}></div>
           <div className={classes.servicesOutline}></div>
@@ -568,16 +568,18 @@ export default function productsandservices() {
           <div className={classes.productsHeader}>The Products We Provide</div>
           <div className={classes.productsSub}>But Not Limited To</div>
           <div className={classes.productsGrid}>
-            {products.map((i) => {
-              return (
-                <Link href={`/product/${i.id}`} key={i.id}>
-                  <div className={classes.productsGridChild}>
-                    <img src={i.img} alt={i.name} />
-                    <div>{i.name}</div>
-                  </div>
-                </Link>
-              );
-            })}
+            {products
+              .filter((i) => ["natural-raw-sugar", "sindhav-salt", "jaggery", "jaggery-powder"].includes(i.id))
+              .map((i) => {
+                return (
+                  <Link href={`/product/${i.id}`} key={i.id}>
+                    <div className={classes.productsGridChild}>
+                      <img src={i.img} alt={i.name} />
+                      <div>{i.name}</div>
+                    </div>
+                  </Link>
+                );
+              })}
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ import PublicIcon from "@material-ui/icons/Public";
 import LocalAtmIcon from "@material-ui/icons/LocalAtm";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 import DataUsageIcon from "@material-ui/icons/DataUsage";
-import products from "../components/products.json";
+import { getProducts } from "../lib/products";
 import BuildIcon from "@material-ui/icons/Build";
 import BusinessIcon from "@material-ui/icons/Business";
 import PhonelinkIcon from "@material-ui/icons/Phonelink";
@@ -484,7 +484,11 @@ const useStyles = makeStyles((theme) =>
     },
   })
 );
-export default function productsandservices() {
+export async function getServerSideProps() {
+  return { props: { products: await getProducts() } };
+}
+
+export default function productsandservices({ products }) {
   const classes = useStyles();
   return (
     <Layout>
@@ -568,9 +572,7 @@ export default function productsandservices() {
           <div className={classes.productsHeader}>The Products We Provide</div>
           <div className={classes.productsSub}>But Not Limited To</div>
           <div className={classes.productsGrid}>
-            {products
-              .filter((i) => ["natural-raw-sugar", "sindhav-salt", "jaggery", "jaggery-powder"].includes(i.id))
-              .map((i) => {
+            {products.map((i) => {
                 return (
                   <Link href={`/product/${i.id}`} key={i.id}>
                     <div className={classes.productsGridChild}>

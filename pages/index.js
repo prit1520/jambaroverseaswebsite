@@ -5,7 +5,7 @@ import PublicIcon from "@material-ui/icons/Public";
 import LocalAtmIcon from "@material-ui/icons/LocalAtm";
 import AccountBalanceIcon from "@material-ui/icons/AccountBalance";
 import DataUsageIcon from "@material-ui/icons/DataUsage";
-import products from "../components/products.json";
+import { getProducts } from "../lib/products";
 import addOn from "../components/addOnProducts.json";
 import Link from "next/link";
 import ContactButton from "../components/contactButton";
@@ -1007,7 +1007,11 @@ const useStyles = makeStyles((theme) =>
   })
 );
 
-export default function Index() {
+export async function getServerSideProps() {
+  return { props: { products: await getProducts() } };
+}
+
+export default function Index({ products }) {
   const classes = useStyles();
   return (
     <Layout>

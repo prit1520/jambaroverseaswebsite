@@ -1,7 +1,6 @@
-import { useRouter } from 'next/router';
 import Layout from "../../components/layout";
 import { makeStyles } from "@material-ui/core/styles";
-import products from "../../components/products.json";
+import { getProducts } from "../../lib/products";
 import { NextSeo } from "next-seo";
 import { Button, Chip } from "@material-ui/core";
 import ContactButton from "../../components/contactButton";
@@ -156,16 +155,15 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ProductDetail() {
+export async function getServerSideProps({ params }) {
+  const products = await getProducts();
+  const product = products.find((item) => item.id === params.id);
+  if (!product) return { notFound: true };
+  return { props: { product } };
+}
+
+export default function ProductDetail({ product }) {
   const classes = useStyles();
-  const router = useRouter();
-  const { id } = router.query;
-
-  const product = products.find(p => p.id === id);
-
-  if (!product) {
-    return <div>Product not found</div>;
-  }
 
   return (
     <Layout>

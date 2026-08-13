@@ -115,7 +115,7 @@ export default function terms() {
           <h3>1. Terms</h3>
           <p>
             By accessing the website at{" "}
-            <a href="https://www.jambaroversea.com">https://www.jambaroversea.com</a>,
+            <a href="https://www.jambaroverseas.com">https://www.jambaroverseas.com</a>,
             you are agreeing to be bound by these terms of service, all
             applicable laws and regulations, and agree that you are responsible
             for compliance with any applicable local laws. If you do not agree

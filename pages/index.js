@@ -1258,7 +1258,7 @@ export default function Index({ products }) {
               </AccordionSummary>
               <AccordionDetails>
                 <Typography className={classes.answer}>
-                  Our products for visit <a href = "http://jambaroversea.com/products-and-services">http://jambaroversea.com/products-and-services</a> We ensure each product meets international quality standards to provide our clients with the best offerings across the globe.
+                  Our products for visit <a href = "http://jambaroverseas.com/products-and-services">http://jambaroverseas.com/products-and-services</a> We ensure each product meets international quality standards to provide our clients with the best offerings across the globe.
                 </Typography>
               </AccordionDetails>
             </Accordion>

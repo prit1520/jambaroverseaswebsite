@@ -101,7 +101,7 @@ export default function privacypolicy() {
             Your privacy is important to us. It is JambarOverseas Inc.'s policy to
             respect your privacy regarding any information we may collect from
             you across our website,{" "}
-            <a href="https://www.jambaroversea.com">https://www.jambaroversea.com</a>,
+            <a href="https://www.jambaroverseas.com">https://www.jambaroverseas.com</a>,
             and other sites we own and operate.
           </p>
           <p>

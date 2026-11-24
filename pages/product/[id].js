@@ -155,9 +155,46 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export async function getServerSideProps({ params }) {
+export async function getStaticPaths() {
   const products = await getProducts();
-  const product = products.find((item) => item.id === params.id);
+  const productMap = new Map();
+  if (Array.isArray(products)) {
+    products.forEach((p) => {
+      if (p && p.id) productMap.set(p.id, p);
+    });
+  }
+  try {
+    const localProducts = require("../../components/products.json");
+    if (Array.isArray(localProducts)) {
+      localProducts.forEach((p) => {
+        if (p && p.id && !productMap.has(p.id)) {
+          productMap.set(p.id, p);
+        }
+      });
+    }
+  } catch (e) {
+    console.error("Error reading local products for paths:", e);
+  }
+
+  const paths = Array.from(productMap.keys()).map((id) => ({
+    params: { id },
+  }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const products = await getProducts();
+  let product = Array.isArray(products) ? products.find((item) => item.id === params.id) : null;
+  if (!product) {
+    try {
+      const localProducts = require("../../components/products.json");
+      product = localProducts.find((item) => item.id === params.id);
+    } catch (e) {}
+  }
   if (!product) return { notFound: true };
   return { props: { product } };
 }

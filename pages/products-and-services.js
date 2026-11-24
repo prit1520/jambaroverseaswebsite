@@ -484,7 +484,7 @@ const useStyles = makeStyles((theme) =>
     },
   })
 );
-export async function getServerSideProps() {
+export async function getStaticProps() {
   return { props: { products: await getProducts() } };
 }
 
